@@ -2,9 +2,7 @@ export const STAGE_WIDTH = 12;
 export const STAGE_HEIGHT = 20;
 
 export const createStage = () =>
-    //  creates an array from stage height
     Array.from(Array(STAGE_HEIGHT), () =>
-        //  create a multi dimensional array with cells and fills with value of 0
         new Array(STAGE_WIDTH).fill([0, 'clear']),
     );
 
