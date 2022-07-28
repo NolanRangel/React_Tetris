@@ -8,7 +8,7 @@ const Cell = ({ type }) => {
 
   return (
 
-    <StyledCell type={type} color={TETROMINOS[type].color} >{console.log("rerender")}</StyledCell>
+    <StyledCell type={type} color={TETROMINOS[type].color} />
 
   )
 }

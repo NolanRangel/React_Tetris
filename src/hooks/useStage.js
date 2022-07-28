@@ -7,6 +7,7 @@ export const useStage = (player, resetPlayer) => {
     const [stage, setStage] = useState(createStage());
     const [rowsCleared, setRowsCleared] = useState(0);
 
+
     useEffect(() => {
         setRowsCleared(0);
         // reduce creates new array and checks if row contains zero. 
@@ -14,7 +15,7 @@ export const useStage = (player, resetPlayer) => {
             newStage.reduce((acc, row) => {
                 // findIndex returns -1 if it doesnt find the value 
                 if (row.findIndex(cell => cell[0] === 0) === -1) {
-                    setRowsCleared(prev => prev + 1);
+                    setRowsCleared(prev => (prev + 1));
                     //  unshift will add blank rows to the top based on how many are taken out
                     acc.unshift(new Array(newStage[0].length).fill([0, 'clear']));
                     return acc;
