@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+
+// Game helpers
 import { createStage, checkCollision } from '../gameHelpers'
 
 // Styled copmponents
